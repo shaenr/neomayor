@@ -62,3 +62,7 @@ neocities/
 .idea/
 local/*
 venv/
+
+*.json
+data/
+www/
