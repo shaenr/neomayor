@@ -1,0 +1,17 @@
+certifi==2021.10.8
+charset-normalizer==2.0.11
+click==8.0.3
+-e git+https://github.com/shaenr/commonplace.git@19481a66d2d5f5f1fb62b5dd9a8a2d959f82cb2c#egg=commonplace
+idna==3.3
+python-dotenv==0.19.2
+requests==2.27.1
+tabulate==0.8.9
+urllib3==1.26.8
+certifi==2021.10.8
+charset-normalizer==2.0.11
+click==8.0.3
+idna==3.3
+python-dotenv==0.19.2
+requests==2.27.1
+tabulate==0.8.9
+urllib3==1.26.8
