@@ -1,20 +1,19 @@
 from pathlib import Path
 import os
-import pwd
 
-USER = pwd.getpwuid(os.getuid())[0]
+try:
+    import pwd
+    USER = pwd.getpwuid(os.getuid())[0]
+except ModuleNotFoundError as e:
+    USER = os.getlogin()
 
-PACKAGE_DIR = Path(os.path.dirname(os.path.abspath(__file__)))
-SRC_DIR = PACKAGE_DIR.parent
-PROJECT_DIR = SRC_DIR.parent
+PROJECT_DIR = Path(os.path.dirname(os.path.abspath(__file__)))
 WWW_STORAGE = PROJECT_DIR / "www"
 CACHE_STORAGE = PROJECT_DIR / "data"
 
 PROJECT_STRUCTURE = {
     "dirs_to_make": [
         PROJECT_DIR,
-        SRC_DIR,
-        PACKAGE_DIR,
         WWW_STORAGE,
         CACHE_STORAGE
     ],
